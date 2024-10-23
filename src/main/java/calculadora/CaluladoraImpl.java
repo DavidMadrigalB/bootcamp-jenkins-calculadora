@@ -12,6 +12,7 @@ public class CaluladoraImpl implements Calculadora {
 			return i1 * i2;
 		else if (op == '/')
 			return i1 / i2;
+		return -1;
 	}
 
 }

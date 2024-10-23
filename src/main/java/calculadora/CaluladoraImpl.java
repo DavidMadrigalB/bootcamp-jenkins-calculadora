@@ -4,7 +4,7 @@ public class CaluladoraImpl implements Calculadora {
 	
 	@Override
 	public int calcular(int i1, char op, int i2) {
-		switch(op)
+		switch(op) {
 			case '+':
 				return i1 + i2;
 				break;
@@ -19,6 +19,7 @@ public class CaluladoraImpl implements Calculadora {
 				break;
 			default:
 				return -1;
+		}
 		/*
 		if (op == '+')
 			return i1 + i2;

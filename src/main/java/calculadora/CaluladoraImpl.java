@@ -4,13 +4,13 @@ public class CaluladoraImpl implements Calculadora {
 	
 	@Override
 	public int calcular(int i1, char op, int i2) {
-		if (op = '+')
+		if (op == '+')
 			return i1 + i2;
-		else if (op = '-')
+		else if (op == '-')
 			return i1 + i2;
-		else if (op = '*')
+		else if (op == '*')
 			return i1 * i2;
-		else if (op = '/')
+		else if (op == '/')
 			return i1 / i2;
 	}
 

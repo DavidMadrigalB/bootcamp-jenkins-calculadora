@@ -7,19 +7,14 @@ public class CaluladoraImpl implements Calculadora {
 		switch(op) {
 			case '+':
 				return i1 + i2;
-				break;
-			case '-':
-				return i1 - i2;
-				break;
-			case '*':
-				return i1 * i2;
-				break;
-			case '/':
-				return i1 / i2;
-				break;
-			default:
-				return -1;
-				break;
+		        case '-':
+		        	return i1 - i2;
+		        case '*':
+		        	return i1 * i2;
+		        case '/':
+		        	return i1 / i2;
+		        default:
+		        	return -1;
 		}
 		/*
 		if (op == '+')

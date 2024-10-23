@@ -19,6 +19,7 @@ public class CaluladoraImpl implements Calculadora {
 				break;
 			default:
 				return -1;
+				break;
 		}
 		/*
 		if (op == '+')

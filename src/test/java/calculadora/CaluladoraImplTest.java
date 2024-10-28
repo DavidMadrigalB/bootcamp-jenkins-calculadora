@@ -25,4 +25,10 @@ class CaluladoraImplTest {
 		Assertions.assertEquals(1, resultado);
 	}
 
+	@Test
+	void test_debe_multiplizar_cuando_se_utiliza_por() {
+		int resultado = calculadora.calcular(3, '+', 2);
+		Assertions.assertEquals(1, resultado);
+	}
+
 }

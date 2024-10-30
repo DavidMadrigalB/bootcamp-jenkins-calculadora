@@ -11,6 +11,12 @@ pipeline {
    }
 
   stages {
+    stage ('ejemplo') {
+      steps {
+        echo params.ENTRADA
+      }
+    }
+    
     stage('Build') {
       steps {
         bat 'mvn -B -q package'

@@ -1,7 +1,11 @@
 pipeline {
   //agent any
   agent { label 'jdk21' }
-   
+
+  environment {
+    WEBHOOKURL = credentials('discord-webhook')
+  }
+  
    tools {
       maven "maven 3.9.9"
    }
@@ -25,6 +29,17 @@ pipeline {
         always {
           junit 'target/surefire-reports/*.xml'
         }
+      }
+    }
+
+    post {
+      always {
+        discordSend webhookURL: WEBHOOKURL,
+          link: env.BUILD_URL,
+          result: currentBuild.currentResult,
+          title: env.BUILD_URL,
+          description: env.JOB_NAME,
+          footer: currentBuild.currentResult
       }
     }
 /*

@@ -2,9 +2,11 @@ pipeline {
   //agent any
   agent { label 'jdk21' }
 
+  /*
   environment {
     WEBHOOKURL = credentials('discord-webhook')
   }
+  */
   
    tools {
       maven "maven 3.9.9"

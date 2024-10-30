@@ -1,9 +1,14 @@
 pipeline {
-  agent any
-
-  tools {
-    maven "maven 3.9.9"
-  }
+  //agent any
+  agent { label 'jdk21' }
+   
+   tools {
+      maven "maven 3.9.9"
+   }
+  
+   parameters {
+      string(name: 'ENTRADA', defaultValue:'hola', description:'Parametro requerido')
+   }
 
   stages {
     stage('Build') {

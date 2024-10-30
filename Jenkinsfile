@@ -45,6 +45,30 @@ pipeline {
         }
       }
     }
+
+    /*
+  stages {
+    paralel {
+      stage ('JAVA 8') {
+        agent {
+          label 'jdk8'
+        }
+        steps {
+          echo "Esto es java 8"
+        }
+      }
+      stage ('JAVA 21') {
+        agent {
+          label 'jdk21'
+        }
+        steps {
+          echo "Esto es java 21"
+        }
+      }
+    }
+  }
+  */
+    
 /*
     post {
       always {

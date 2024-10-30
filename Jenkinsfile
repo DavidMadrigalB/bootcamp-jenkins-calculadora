@@ -1,6 +1,6 @@
 pipeline {
-  //agent any
-  agent { label 'jdk21' }
+  agent any
+  //agent { label 'jdk21' }
 
   /*
   environment {
@@ -17,7 +17,19 @@ pipeline {
    }
 
   stages {
-    stage ('ejemplo') {
+    stage ('JAVA 8') {
+      agent {
+        label 'jdk8'
+      }
+      steps {
+        echo "Esto es java 8"
+      }
+    }
+    
+    stage ('Ejemplo') {
+      agent {
+        label 'jdk21'
+      }
       steps {
         echo params.ENTRADA
       }

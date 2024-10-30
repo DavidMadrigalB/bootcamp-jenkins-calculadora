@@ -27,5 +27,14 @@ pipeline {
         }
       }
     }
+/*
+    post {
+      always {
+        mail to: 'madrigal.bd@gmail.com, davidmadrigalbuendia@gmail.com',
+          subject: env.JOB_NAME,
+          body: currentBuild.currentResult + ': ' + env.BUILD_URL
+      }
+    }
+*/
   }
 }

@@ -31,7 +31,7 @@ pipeline {
         }
       }
     }
-
+/*
     post {
       always {
         discordSend webhookURL: WEBHOOKURL,
@@ -42,6 +42,7 @@ pipeline {
           footer: currentBuild.currentResult
       }
     }
+    */
 /*
     post {
       always {

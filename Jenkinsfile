@@ -17,6 +17,7 @@ pipeline {
    }
 
   stages {
+    /*
     stage ('JAVA 8') {
       agent {
         label 'jdk8'
@@ -25,11 +26,14 @@ pipeline {
         echo "Esto es java 8"
       }
     }
+    */
     
     stage ('Ejemplo') {
+      /*
       agent {
         label 'jdk21'
       }
+      */
       steps {
         echo params.ENTRADA
       }
@@ -46,6 +50,27 @@ pipeline {
       }
     }
 
+    post {
+      failure {
+        echo "Cuando falla"
+      }
+      success {
+        echo "Se ejecuto con exito"
+      }
+      aborted {
+        echo "El job se aborto"
+      }
+      changed {
+        echo "Cambió"
+      }
+      fixed {
+        echo "Arreglado"
+      }
+      always {
+        echo "Siempre se ejecuta"
+      }
+    }
+    
     /*
   stages {
     paralel {
@@ -81,6 +106,7 @@ pipeline {
       }
     }
     */
+    
 /*
     post {
       always {

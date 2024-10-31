@@ -1,7 +1,6 @@
 pipeline {
   agent any
   //agent { label 'jdk21' }
-
   /*
   environment {
     WEBHOOKURL = credentials('discord-webhook')

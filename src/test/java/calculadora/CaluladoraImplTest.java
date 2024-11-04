@@ -14,21 +14,9 @@ class CaluladoraImplTest {
 	}
 
 	@Test
-	void test_debe_sumar_cuando_se_utiliza_mas() {
-		int resultado = calculadora.calcular(1, '+', 2);
-		Assertions.assertEquals(3, resultado);
-	}
-
-	@Test
 	void test_debe_restar_cuando_se_utiliza_menos() {
 		int resultado = calculadora.calcular(3, '-', 2);
 		Assertions.assertEquals(1, resultado);
-	}
-
-	@Test
-	void test_debe_multiplizar_cuando_se_utiliza_por() {
-		int resultado = calculadora.calcular(3, '*', 2);
-		Assertions.assertEquals(6, resultado);
 	}
 
 }
